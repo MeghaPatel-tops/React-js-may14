@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function alertExmp(){
+            alert("Alter Example");
+        }
+        function promptExmp(){
+            let name = prompt("Enter Your Name",'John');
+            alert(name);
+        }
+        function confirmExmp(){
+             let flag = confirm("You want to delete Item?");
+             if(flag){
+                 alert("Item deleted successfully");
+             }
+             else{
+                alert("try again");
+             }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="alertExmp()">Alert Example</button>
+    <button onclick="promptExmp()">Prompt Example</button>
+    <button onclick="confirmExmp()">Confirm Example</button>
+</body>
+</html>

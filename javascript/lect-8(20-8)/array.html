@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <ul id="subjectlist"></ul>
+</body>
+    <script>
+        let subjects= ["php","java","react","node"];
+        console.log(subjects);
+
+        console.log(subjects[2]);
+
+        subjects[3]=".net";
+        console.log(subjects);
+
+        console.log(subjects.length);
+        let ulid=document.getElementById('subjectlist');
+        let str="";
+        for(i=0;i<subjects.length;i++){
+            str+= `<li>${subjects[i]}</li>`;
+        }
+
+        ulid.innerHTML=str;
+        
+
+        let mixedArray =[
+            "Tops",
+            301,
+            {address:'jeevandeep comnplex'},
+            true
+        ];
+
+        console.log(mixedArray);
+        console.log(mixedArray[2].address);
+
+        console.log(subjects.at(-1));
+
+        console.log(subjects[subjects.length-1]);
+        
+        
+        
+        
+    </script>
+</html>

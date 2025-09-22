@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //function with parameter
+        function add(a,b){
+            c=a+b;
+            console.log(`addition=${c}`);
+            
+        }
+
+        add(13,45);
+
+
+        //Default value
+        function findAreaOfCircle(r,pi=3.14){
+            let area = pi*r*r;
+            console.log(area);
+            
+        }
+        findAreaOfCircle(2);
+
+        //function returning value
+        function fact(num){
+            if(num==1)
+                return 1;
+            f= num*fact(num-1);
+            return f;
+        }
+
+        let factAns=fact(5);
+        console.log(factAns);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

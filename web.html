@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           
+        }
+        body{
+            overflow-x: hidden;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+         <div class="container-fluid postition-relative" style="min-height: 600px;">
+                <nav class="navbar navbar-expand-lg navbar-light   position-absolute fixed-top" style="z-index: 1;background-color: rgba(0,0,0,0.5);">
+                    <div class="container-fluid">
+                            <img src="logo.jpg" class="img-fluid" alt="" style="max-width: 80px; max-height: 80px;">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Link</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item text-white" href="#">Action</a></li>
+                                    <li><a class="dropdown-item text-white" href="#">Another action</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item text-white" href="#">Something else here</a></li>
+                                </ul>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link disabled text-white" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                                </li>
+                            </ul>
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-dark text-white" type="submit">Search</button>
+                            </form>
+                            </div>
+                        </div>
+                </nav>
+                <div class="container-fluid position-absolute fixed-top" style="z-index: -1; opacity: 0.9;">
+                        <div id="carouselExampleControls" class="carousel slide bg-primary" data-bs-ride="carousel" >
+                        <div class="carousel-inner" style="height: 600px;">
+                        <div class="carousel-item active">
+                            <div class="container-fluid  position-absolute" style="top:300px;width: 100%;">
+                               
+                            </div>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTcyT3Mm7YHgLqvSzt4mz24mQ-qz_6yXXIOg&s" class="d-block w-100 img-fluid" style="min-height: 600px;" alt="...">
+                        
+                        </div>
+                        <div class="carousel-item">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/054/278/212/small/foodgraphy-a-culinary-still-life-photo.jpg" class="d-block w-100 " alt="..." style="min-height: 600px;">
+                                
+                        </div>
+                        <div class="carousel-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTcyT3Mm7YHgLqvSzt4mz24mQ-qz_6yXXIOg&s" class="d-block w-100 img-fluid" alt="..." style="min-height: 600px;">
+                        </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                        </div>
+                </div>
+                <div class="container-fluid position-absolute bottom-0  d-flex justify-content-center ">
+                    
+                      <div class="row p-5 d-flex justify-content-center ">
+                                    <div class="col-md-3 border rounded border-white text-center ms-2" style="background-color: rgba(0,0,0,0.1);">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut aliquid non tempore expedita nostrum reiciendis! Culpa praesentium libero provident iste eveniet mollitia nihil tempora ex dicta? Ipsam esse itaque veniam?
+                                    </div>
+                                    <div class="col-md-3 border rounded border-white text-center ms-2" style="background-color: rgba(0,0,0,0.1);">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut aliquid non tempore expedita nostrum reiciendis! Culpa praesentium libero provident iste eveniet mollitia nihil tempora ex dicta? Ipsam esse itaque veniam?
+                                    </div> 
+                                    <div class="col-md-3 border rounded border-white text-center ms-2" style="background-color: rgba(0,0,0,0.1);">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut aliquid non tempore expedita nostrum reiciendis! Culpa praesentium libero provident iste eveniet mollitia nihil tempora ex dicta? Ipsam esse itaque veniam?
+                                    </div>
+                                    
+                                </div>
+                </div>
+           
+   </div>
+    <div class="container postition-relative mt-5 ">
+        
+                <div class="row">
+                    <div class="col-md-6  d-flex gap-2 align-items-start" style="height: 400px;">
+                       <img src="images1.jpg" alt="" width="250px" >
+                       <img src="images1.jpg" alt="" width="250px" class="align-self-end">
+                    </div>
+                    <div class="col-md-6 p-5">
+                        
+                        <h1>Feliciano</h1>
+                        <h6 style="color: orange;">Best Rest</h6>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, dignissimos fuga laudantium dolores assumenda, corrupti est odio sit distinctio doloremque autem ad voluptate id natus consequatur totam? Voluptatum, consequuntur illo?
+                        </p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-3 text-center">
+                        <h1 style="color: orange;">18</h1>
+                        <h2>Year of Exp</h2>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <h1 style="color: orange;">18</h1>
+                        <h2>Year of Exp</h2>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <h1 style="color: orange;">18</h1>
+                        <h2>Year of Exp</h2>
+                    </div>
+                    <div class="col-md-3 text-center">
+                       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit tempore laboriosam nobis voluptates qui harum dolor ipsam, sit suscipit ipsum. Laudantium sit debitis id, asperiores veritatis fugit illum et dolorem.</p>
+                    </div>
+                </div>
+
+            </div>  
+           <div class="container-fluid bg-light" >
+            
+            <div class="container">
+                <h1 class="text-center">Services</h1>
+                <div class="row">
+                    <div class="col-md-4 text-center border rounded border-warning">
+                        <h1>Food</h1>
+                        
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque asperiores sint et blanditiis? Vitae dolore vel eligendi, quae deleniti nobis, blanditiis reprehenderit optio hic impedit unde eos. Perspiciatis, mollitia quasi.</p>
+                    </div>
+                    <div class="col-md-4  text-center border rounded border-warning">
+                        <h1>Food</h1>
+                        
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque asperiores sint et blanditiis? Vitae dolore vel eligendi, quae deleniti nobis, blanditiis reprehenderit optio hic impedit unde eos. Perspiciatis, mollitia quasi.</p>
+                    </div>
+                    <div class="col-md-4 text-center border rounded border-warning">
+                        <h1>Food</h1>
+                        
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque asperiores sint et blanditiis? Vitae dolore vel eligendi, quae deleniti nobis, blanditiis reprehenderit optio hic impedit unde eos. Perspiciatis, mollitia quasi.</p>
+                    </div>
+                    
+                </div>
+            </div>
+           </div>   
+</body>
+</html>

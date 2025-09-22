@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" id="box-1">test1</div>
+    <div class="box" id="box-1">test2</div>
+    <div class="box" id="box-1">test3</div>
+
+    <p id="para1">testtttst</p>
+
+</body>
+<script>
+   let box1= document.querySelector('#box-1');
+   console.log(box1);
+
+   let allBox = document.querySelectorAll("#box-1");
+   console.log(allBox);
+   
+   let paraid=document.querySelector('#para1')
+   let para1=paraid.textContent;
+   console.log(para1);
+
+   paraid.textContent="lorem dummy";
+   
+</script>
+</html>

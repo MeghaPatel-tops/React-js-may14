@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="box1" id="box1">
+            <p id="para1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus eaque id a reprehenderit eos veniam vel nisi ducimus cum doloribus? Doloremque ullam aliquid iste quibusdam, inventore animi fugiat facere! Iusto.</p>
+    </div>
+    <button onclick="addImage()">Add Image</button>
+    <button id="btn2">Click</button>
+</body>
+<script>
+    function addImage(){
+        let box1= document.getElementById('box1');
+        let para1= document.getElementById('para1');
+        box1.removeChild(para1);
+        let img1=document.createElement('img');
+        img1.setAttribute('src','download.jpg');
+        img1.style.width="200px";
+        img1.style.height="200px";
+        console.log(img1);
+        
+       // box1.innerHTML=img1;
+       box1.appendChild(img1)
+
+    }
+    document.getElementById('btn2').onclick=function(){
+        alert("btn click");
+    }
+</script>
+</html>

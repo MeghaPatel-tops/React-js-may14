@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let user={
+            name:"megha",
+            email:"m@gmail.com"
+        }
+        console.log(user);
+        console.log(user.name);
+        //add property in object
+        user.contact = "909987897";
+         console.log(user);
+
+         //delete property
+         delete user.email;
+         console.log(user);
+
+         //add square brac
+         user['address']="101 main street surat";
+         console.log(user);
+
+
+         for(key in user){
+            console.log(`${key}= ${user[key]}`)
+         }
+
+
+
+         let one={name:"one"};
+
+         let two = one;
+
+         console.log(two);
+         two.name="temp";
+         console.log(one);
+
+         
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

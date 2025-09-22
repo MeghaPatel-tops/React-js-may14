@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let navItem = ['Home','About','Contact','Service'];
+
+        console.log(navItem);
+
+        //===========add element at end===========
+        navItem.push('Gallary');
+
+        console.log(navItem);
+
+        //===========remove element at end===========
+        navItem.pop();
+
+        console.log(navItem);
+
+        //==========Remove element from start===========
+        navItem.shift();
+
+         console.log(navItem);
+
+         //==========add element at start===========
+        navItem.unshift("Logo");
+        console.log(navItem);
+
+        //=========array loop for of==============
+
+        for(index in navItem){
+            console.log(navItem[index]);        
+        }
+
+        let subjects=[
+            ["html","css","js"],
+            ["php","java",".net"]
+        ];
+
+
+        console.log(String(navItem));
+        
+
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            width: 80%;
+            padding: 30px;
+            border: 10px solid black;
+        }
+        td,th{
+            border: 2px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <fieldset>
+                  <legend>Add Employee</legend>
+                  <label for="">Enter Name:</label>
+                  <input type="text" name="" id="empname">
+                  <br><br>
+                   <label for="">Enter Email:</label>
+                  <input type="text" name="" id="email">
+                  <br><br>
+                   <label for="">Enter Salary:</label>
+                  <input type="text" name="" id="salary">
+                  <br><br>
+                   <label for="">Enter Department:</label>
+                  <input type="text" name="" id="dept">
+                  <br><br>
+                  <input type="hidden" name="" id="empid">
+                  <input type="button" value="Add" onclick="addEmp()">
+                  <input type="button" value="Update" onclick="updateEmp()">
+            </fieldset>
+            <h1>View Employees</h1>
+            <table>
+                <thead >
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Email</th>
+                        <th>Salary</th>
+                        <th>Department</th>
+                        <th>action </th>
+                    </tr>
+                </thead>
+                <tbody id="emprow">
+                  
+                </tbody>
+            </table>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

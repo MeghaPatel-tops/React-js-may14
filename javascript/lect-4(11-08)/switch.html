@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function order(){
+            let item = document.getElementById('item').value;
+            let qty = document.getElementById('qty').value;
+            console.log(typeof(item));
+            item = Number(item);
+            
+            switch(item){
+                case 1:
+                    document.write(` <h1>Total Amount = ${350*qty}</h1>`);
+                break;
+                case 2: 
+                    document.write(` <h1>Total Amount = ${200*qty}</h1>`);
+                break ;
+                 case 3: 
+                    document.write(` <h1>Total Amount = ${100*qty}</h1>`);
+                break ;
+                 case 4: 
+                    document.write(` <h1>Total Amount = ${150*qty}</h1>`);
+                break;
+                default: 
+                    document.write(` <h1>Wrong choice</h1>`);
+                break        
+            }
+
+        }
+    </script>
+</head>
+<body>
+   
+    <h1>Welcome to food cart</h1>
+    <ul>
+        <li>1.Pizza -----------------------350</li>
+        <li>2.Noodels-----------------------200</li>
+        <li>3.Tea-----------------------100</li>
+        <li>4.Coffee-----------------------150</li>
+      
+    </ul>
+    <fieldset>
+        <legend>Order Now</legend>
+        <labe>Enter Item</labe>
+        <input type="text" name="" id="item">
+        <br><br>
+        <labe>Quantity:</labe>
+        <input type="text" name="" id="qty">
+        <br><br>
+        <button type="button" onclick="order()">Add</button>
+    </fieldset>
+</body>
+</html>

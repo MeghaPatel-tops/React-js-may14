@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        body{
+            padding: 100px;
+        }
+        .container{
+            height: 500px;
+            width: 100%;
+            border: 10px solid black;
+            display: flex;
+            padding: 10px;
+        }
+        .aside{
+            background-color: black;
+            height: 400px;
+            width: 200px;
+            padding: 20px;
+        }
+        .item{
+            background-color: gray;
+            text-align: center;
+            width: 200px;
+            padding: 30px 0px;
+            color: white;
+            border-bottom: 1px solid white;
+        }
+        button{
+            height: 40px;
+            background-color: blue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="btn1" onclick="openAside()" style="display: none;">open</button>
+        <div class="aside" id="aside">
+             
+            <button id="btn2" onclick="closeAside()">Close</button>
+           <div class="item">Home-1</div>
+           <div class="item">Home-2</div>
+           <div class="item">Home-3</div>
+        </div>
+        <div class="main"></div>
+    </div>
+</body>
+<script>
+    function closeAside(){
+        document.getElementById('btn1').style.display="block";
+        console.log( document.getElementById('btn1')    );
+        
+        document.getElementById('aside').style.display="none";
+    }
+      function openAside(){
+        document.getElementById('btn1').style.display="none";
+        document.getElementById('btn2').style.display="block";
+        console.log( document.getElementById('btn1'));
+        
+        document.getElementById('aside').style.display="block";
+    }
+</script>
+</html>

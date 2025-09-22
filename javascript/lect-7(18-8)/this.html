@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let user={
+            name:"megha",
+            email:"m@gmail.com",
+            printUser:function (){
+                console.log(this.name);
+                console.log(this.email);     
+            }
+        }
+       // user.printUser();
+
+        let user1 = function(name,email){
+                this.email=email;
+                this.name=name;
+
+                this.printUser=function(){
+                    console.log(this.name);
+                      console.log(this.email);
+                }
+        }
+
+        let u1 = new user1("megha","megha@gmail.com");
+        u1.printUser();
+      
+
+        let u2 = new user1("bansi","bansi@gmail.com");
+        u2.printUser();
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

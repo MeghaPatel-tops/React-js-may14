@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Registration Form</legend>
+         <form method="post" name="frm" id="frm1">
+            <div>
+                 <label for="">Enter Name</label>
+                <input type="text" name="usename" id="usename">
+            </div>
+            <div>
+                 <label for="">Enter Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div>
+                 <label for="">Enter Password</label>
+                <input type="password" name="pwd" id="pwd">
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+         </form>
+    </fieldset>
+</body>
+<script>
+    
+    let eleFrm = document.getElementById('frm1');
+    
+ 
+    
+    eleFrm.addEventListener('submit',function(e){
+        let frm = document.forms.frm;
+    
+        let name = frm.elements.usename.value;
+        console.log(frm.usename);
+        
+        alert(name);
+        e.preventDefault();
+        alert("form submit");
+    })
+</script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //5! 5*4! 5*4*3!
+        function factFind(num){
+            if(num==1){
+                return 1;
+            }
+            f= num*factFind(num-1);
+            return f;
+        }
+
+        let ans=factFind(5);
+        console.log(ans);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

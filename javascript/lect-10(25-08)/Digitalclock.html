@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 500px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            width: 400px;
+            background-color: green;
+            padding: 50px 100px;
+        }
+        .box p{
+            font-size: 2em;
+        }
+    </style>
+    <script>
+        function printTime(){
+        let date = new Date();
+        
+        
+        let newdate = [date.getFullYear(),date.getMonth()+1,date.getDate()];
+
+        let newtime =[date.getHours(),date.getMinutes(),date.getSeconds()];
+
+        let str = newdate.join("-") ;
+         str+=" "+ newtime.join(":");
+        
+        document.getElementById('currenttime').innerHTML=str;
+        }
+        setTimeout(printTime,3000);
+
+        setInterval(printTime,1000);
+    </script>
+</head>
+<body>
+   <div class="box">
+      <p id="currenttime"></p>
+   </div>
+</body>
+</html>

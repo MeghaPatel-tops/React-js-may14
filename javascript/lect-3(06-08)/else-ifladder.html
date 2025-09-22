@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        img{
+            height: 200px;
+            width: 200px;
+            border-radius: 20px;
+        }
+    </style>
+    <script>
+        function changeFilter(style1){
+            let img1= document.getElementById('img1');
+            let str;
+            // img1.style.filter="grayscale(60%)"
+            if(style1=="grayscale"){
+                str="grayscale(60%)"
+            }
+            else if(style1=='blur'){
+                str="blur(5px)";
+            }
+            else if(style1=="brightness"){
+                str="brightness(40%)";
+            }
+            else if(style1=="contrast"){
+                str= "contrast(20%)";
+            }
+            else if(style1=="hue"){
+                str="hue-rotate(40deg)"
+            }
+            else {
+                str="none";
+            }
+
+            img1.style.filter=str;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <img src="one.jpg" alt="" id="img1">
+        <br>
+        <button onclick="changeFilter('grayscale')">Grayscale</button>
+        <button onclick="changeFilter('blur')">BLur</button>
+        <button onclick="changeFilter('brightness')">Brightness</button>
+        <button onclick="changeFilter('contrast')">Contrast</button>
+        <button onclick="changeFilter('hue')">Hue-rotate</button>
+    </div>
+</body>
+</html>

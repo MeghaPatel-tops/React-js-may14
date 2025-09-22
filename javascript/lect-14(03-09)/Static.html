@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Test{
+            _privateData = "test1";
+            static m=13;
+            constructor(x){      
+                this.x=x
+            }
+
+            static printStaticData(){
+                 console.log("static varible",Test.m);
+            }
+
+            printValue(){
+                console.log(this._privateData);
+                
+                console.log(this.x);
+                
+            }
+        }
+        let t1= new Test(100);
+        t1.printValue();
+
+       
+
+        let t2 = new Test(400);
+        t2.printValue();
+
+        Test.printStaticData();
+
+         console.log(t2._privateData);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function outerFunction(name){
+            console.log("outer function called");
+
+             function innerFunction(){
+                let str="str1";
+                console.log(str);  
+            }
+            console.log(str);  
+            
+        }
+
+        let inner = outerFunction("Test");
+      
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

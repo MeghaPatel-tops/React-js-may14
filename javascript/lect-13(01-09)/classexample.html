@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Person{
+            constructor(name,age){
+                this.name=name;
+                this.age=age
+            }
+
+          
+        }
+
+        class Teacher extends Person{
+            constructor(name,age,qua,exp){
+                super(name,age);
+                this.qua=qua;
+                this.exp=exp;
+            }
+              personPrint(){
+                console.log(this.name);
+                console.log(this.age);
+                console.log(this.qua);
+                console.log(this.exp);
+                    
+            }
+        }
+
+        let t1= new Teacher("Mala","32","Bed","6year");
+        t1.personPrint();
+
+
+        class Parents {
+            test(){
+                console.log("parent class method called");
+                
+            }
+        }
+
+        class Child extends Parents{
+            test(){
+                super.test();
+                console.log("child class Method");
+                
+            }
+        }
+
+        let c1 = new Child();
+        c1.test();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

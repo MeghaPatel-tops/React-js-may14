@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <fieldset>
+    <legend>Registraion form</legend>
+    <form method="post" id="frm1">
+     <div id="box1">
+         <label for="">Enter Name</label>
+    <input type="text" name="" id="username" >
+    <br>
+     </div>
+    <div id="box2">
+         <label for="">Enter Email</label>
+    <input type="email" name="" id="email" >
+    <br>
+    </div>
+    <div id="box3">
+          <label for="">Enter Password</label>
+    <input type="password" name="" id="password">
+    <br>
+    </div>
+    <input type="submit" value="Add">
+    </form>
+ </fieldset>
+
+ <div class="box5" style="margin-top: 200px; border: 10px solid black;padding: 20px;">
+    <label for="">Enter Password</label>
+    <input type="password" name="" id="pwd">
+    <br><br>
+    <input type="checkbox" name="" id="check1">Show
+ </div>
+</body>
+
+<script>
+    let check1 = document.getElementById('check1');
+
+    check1.addEventListener('change',function(){
+        
+        let pwd = document.getElementById('pwd');
+       if(pwd.getAttribute('type')=='password'){
+             pwd.setAttribute('type','text')
+       }
+       else{
+            pwd.setAttribute('type','password')
+       }
+       
+    })
+
+    function validateEmail(email){
+        let pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return pattern.test(email);
+
+    }
+    let frm1 = document.getElementById('frm1');
+    frm1.addEventListener('submit',function(e){
+         e.preventDefault();
+         let username=document.getElementById('username');
+          //console.log(username.value.length);
+          
+         if(username.value.trim() === ""){
+             let p1 = document.createElement('p');
+             p1.style.color="red";
+             p1.innerText="User Name Required";
+            document.getElementById('box1').append(p1);
+            username.focus();
+         }
+
+        let email=document.getElementById('email');
+         
+         if(email.value.trim() === ""){
+             let p1 = document.createElement('p');
+             p1.style.color="red";
+             p1.innerText="User Name Required";
+            document.getElementById('box2').append(p1);
+            email.focus();
+         }
+        
+        if(!validateEmail(email.value)){
+             let p1 = document.createElement('p');
+             p1.style.color="red";
+             p1.innerText="Enter valid Email 'a@gmail.com' ";
+            document.getElementById('box2').append(p1);
+            email.focus();          
+         }
+
+          if(password.value.trim() === ""){
+             let p1 = document.createElement('p');
+             p1.style.color="red";
+             p1.innerText="Password Required";
+            document.getElementById('box3').append(p1);
+            password.focus();
+         }
+         
+         if(password.value.length < 8){
+            let p1 = document.createElement('p');
+             p1.style.color="red";
+             p1.innerText="Max char 8";
+            document.getElementById('box3').append(p1);
+            password.focus();
+         }
+       
+         
+         
+         
+
+
+       
+    })
+</script>
+</html>

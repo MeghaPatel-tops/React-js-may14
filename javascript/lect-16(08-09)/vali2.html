@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            background-color: lightcoral;
+            color: red;
+            padding: 20px;
+        }
+    </style>
+    <script>
+        function validateName(){
+           
+          let name =document.getElementById('name').value;
+            if(name.trim() === ""){
+            let p1 = document.createElement('p');
+            p1.setAttribute('id','nameid');
+             p1.innerText="User Name Required";
+            document.getElementById('namediv').append(p1);
+           document.getElementById('name').focus();
+            }
+            else{
+                 document.getElementById('nameid').style.display="none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form method="post">
+       <div id="namediv">
+             <label for="">Enter name</label>
+        <input type="text" name="" id="name">
+       </div>
+       <div id="passdiv">
+        <label for="">Password</label>
+        <input type="password" name="" id="" onfocus="validateName()">
+       </div>
+    </form>
+</body>
+</html>

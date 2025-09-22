@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function findPow(){
+            let x=prompt("Enter X");
+            let n = prompt("Enter N");
+            let p=1;
+            for(i=1;i<=n;i++){
+                p=p*x;
+            }
+           let str=`${x}<sup>${n}</sup>=${p}`;
+           document.write(str);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="findPow()">Find Power</button>
+</body>
+</html>

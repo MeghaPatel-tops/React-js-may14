@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Vertical (basic) form</h2>
+  <form method="post" id="form2">
+    <div class="form-group">
+      <label for="email">ProductName:</label>
+      <input type="hidden" name="" id="pid">
+      <input type="text" class="form-control" id="pname" placeholder="Enter Product Name" >
+    </div>
+    <div class="form-group">
+      <label for="pwd">Price:</label>
+      <input type="price" class="form-control" id="price" placeholder="Enter Product price" >
+    </div>
+     <div class="form-group">
+      <label for="pwd">Description:</label>
+      <input type="price" class="form-control" id="desc" placeholder="Enter Product Description" >
+    </div>
+     <div class="form-group">
+      <label for="pwd">Image:</label>
+      <input type="text" class="form-control" id="image" placeholder="Enter Product Image url" >
+    </div>
+       <button type="submit" class="btn btn-default">Submit</button>
+
+  </form>
+</div>
+
+</body>
+<script>
+    window.onload= getSingleProduct();
+async function getSingleProduct(){
+    const queryString = window.location.search; 
+const searchParams = new URLSearchParams(queryString);
+const Id = searchParams.get('id'); 
+  
+let res = await fetch('https://fakestoreapi.com/products/'+Id);
+let data = await res.json();
+
+console.log(data);
+  document.getElementById('pname').value=data.title;
+document.getElementById('price').value=data.price;
+document.getElementById('desc').value=data.description;
+document.getElementById('image').value=data.image;
+document.getElementById('pid').value=data.id;
+
+
+
+}
+
+//====================update Product=========================
+let form2 = document.getElementById('form2');
+
+form2.addEventListener('submit',async function(e){
+    e.preventDefault();
+    let id=document.getElementById('pid').value;
+    console.log(id);
+    
+    let productdata ={
+        title:document.getElementById('pname').value,
+        price:document.getElementById('price').value,
+        description:document.getElementById('desc').value,
+        image:document.getElementById('image').value,
+        category:"product"
+    }
+
+    let res= await fetch('https://fakestoreapi.com/products/'+id,{
+        method:"PUT",
+         headers: {
+            'Content-Type': 'application/json;charset=utf-8'
+        },
+        body: JSON.stringify(productdata)
+    })
+
+    let result = await res.json();
+     if(result){
+        alert("Data successfully Updated");
+        window.location="index.html";
+     }
+})
+</script>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            position: relative;
+        }
+        .btn1{
+            position: absolute;
+            top:250px;
+            left:100px;
+            background-color: white;
+            padding: 10px;
+        }
+         .btn2{
+            position: absolute;
+            top:250px;
+            right:150px;
+            background-color: white;
+            padding: 10px;
+        }
+        .container{
+            width: 95%;
+            height: 500px;
+            border: 10px solid black;
+            display: flex;
+            overflow-x: hidden;
+           
+        }
+        .container img{
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+     <button class="btn1">left</button>
+    <button class="btn2">right</button>
+    <div class="container">
+       
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9YYh5Fk1u9VsWWr1MhkyQeOzeNbtnnMO96g&s" alt="" id="img-1" class="img">
+        <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="" id="img-2" style="display: none;" class="img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9EZNefY1fRsA4qVFTBviWyj-5KHY6U8LG0g&s" alt="" id="img-3" style="display: none;" class="img">
+    </div>
+</body>
+<script>
+    let btn1= document.querySelector(".btn1");
+    let btn2= document.querySelector(".btn2");
+    let count=1;
+    btn2.addEventListener('click',function(){
+        console.log("init="+count);
+        
+        if(count==3){
+            console.log("in");
+            
+            document.querySelector("#img-"+count).style.display="block";
+        }
+        else{
+              document.querySelector("#img-"+count).style.display="none";
+                count++;
+                    
+                document.querySelector("#img-"+count).style.display="block";
+                console.log(count);
+        }
+        
+          })
+
+
+
+       //===========================================================   
+        btn1.addEventListener('click',function(){
+        console.log("init="+count);
+        
+        if(count==1){
+            console.log("in");
+            
+            document.querySelector("#img-"+count).style.display="block";
+        }
+        else{
+              document.querySelector("#img-"+count).style.display="none";
+                count--;
+                    
+                document.querySelector("#img-"+count).style.display="block";
+                console.log(count);
+        }
+       
+       
+        
+     
+      
+    })
+</script>
+</html>

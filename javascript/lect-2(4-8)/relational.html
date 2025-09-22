@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function relationExample(){
+             let num1=document.getElementById('num1').value;
+            let num2= document.getElementById('num2').value;
+         
+            num1 = Number(num1);
+            num2= Number(num2);
+            console.log(num1);
+            console.log(num2);
+            
+            
+            console.log(num1===num2);
+            
+        }
+    </script>
+</head>
+<body>
+     <fieldset>
+        <legend>Simple calc</legend>
+        <label for="">Enter Num1</label>
+        <input type="text" name="" id="num1">
+        <br><br><br>
+        <label for="">Enter num2</label>
+        <input type="text" name="" id="num2">
+        <br><br><br>
+        <input type="button" value="Submit" onclick="relationExample()">
+        <p id="result"></p>
+    </fieldset>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p id="para1">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic eligendi nisi dicta placeat, distinctio nihil architecto ut corrupti expedita, eos soluta explicabo veritatis obcaecati ipsa aliquam dignissimos suscipit, delectus voluptatum.
+    </p>
+     <fieldset>
+        <legend>Form</legend>
+         <input type="text" name="username" id="">
+         <input type="button" value="Add" onclick="getUsername()">
+     </fieldset>
+    <div class="box" id="box-1"></div>
+    <div class="box" id="box-2"></div>
+    <div class="box" id="box-3"></div>
+</body>
+<script>
+    //===============byid
+    document.getElementById('para1').style.backgroundColor="red";
+
+    let boxCollection = document.getElementsByClassName('box');
+    console.log(boxCollection);
+    $colorArray=["#FF0000","#00FF00","#0000FF"]
+
+    for(let i=0;i<boxCollection.length;i++){
+        boxCollection[i].style.backgroundColor=$colorArray[i];
+    }
+
+    function getUsername(){
+        let uname = document.getElementsByTagName('input')[0].value;
+        console.log(uname);
+        alert(uname);
+
+        
+        alert(uname)
+    }
+    
+</script>
+</html>

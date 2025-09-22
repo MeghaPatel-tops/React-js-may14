@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" ></div>
+    <button onclick="changeShape()">Convert into circle</button>
+    <button id="btn1">Click</button>
+
+    <fieldset>
+        <legend>
+            form
+        </legend>
+        <input type="text" name="" id="text1">
+        <p id="result"></p>
+    </fieldset>
+</body>
+<script>
+    function changeShape(){
+        let box = document.querySelector(".box");
+        box.style.borderRadius="50%";
+    }
+
+    let btn = document.getElementById('btn1');
+    btn.addEventListener('click',function(){
+        alert("button click"+this.id);
+    })
+
+    let text1 = document.getElementById('text1');
+    console.log(text1);
+    
+    text1.addEventListener('keyup',function(){
+       
+            document.getElementById('result').textContent=this.value;
+    })
+
+    
+</script>
+</html>
