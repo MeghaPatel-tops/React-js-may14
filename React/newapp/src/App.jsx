@@ -9,6 +9,8 @@ import { Comman,Test } from './components/Comman'
 import Counterapp from './components/Counterapp'
 import StyleCompo from './components/StyleCompo'
 import Theme from './components/Theme'
+import Header from './components/Header'
+import UserReg from './components/UserReg'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -27,6 +29,8 @@ function App() {
            <StyleCompo /> */}
 
            <Theme />
+           <Header />
+           <UserReg />
        </div>
     
   )
