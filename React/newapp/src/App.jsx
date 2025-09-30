@@ -11,6 +11,7 @@ import StyleCompo from './components/StyleCompo'
 import Theme from './components/Theme'
 import Header from './components/Header'
 import UserReg from './components/UserReg'
+import Productdata from './components/Productdata'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,19 +19,7 @@ function App() {
   return (
    
         <div>
-           {/* <h1>Welcome to react app:{name}</h1>
-           <input type="text" name="q" id="" /> */}
-           {/* <Home username="megha" /> */}
-           {/* <About />
-           <Footer />
-           <Comman />
-           <Test /> */}
-           {/* <Counterapp />
-           <StyleCompo /> */}
-
-           <Theme />
-           <Header />
-           <UserReg />
+          <Productdata />
        </div>
     
   )
