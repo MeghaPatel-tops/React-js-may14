@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "0d07",
+      "username": "Megha",
+      "email": "megha123@gmnail.com",
+      "password": "123",
+      "contact": "9979897073"
+    },
+    {
+      "id": "f895",
+      "username": "kevinryan",
+      "email": "n@gmail.com",
+      "password": "123",
+      "contact": "9979897073"
+    }
+  ]
+}
