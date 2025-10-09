@@ -9,6 +9,8 @@ import About from './component/About'
 import Create from './component/User/Create'
 import Login from './component/User/Login'
 import Profile from './component/User/Profile'
+import Productindex from './component/Product/Productindex'
+import Productcreate from './component/Product/Productcreate'
 
 
 function App() {
@@ -34,6 +36,12 @@ function App() {
 
                  </Route>
                  <Route path='/profile' element={<Profile />}>
+
+                 </Route>
+                  <Route path='/product' element={<Productindex />}>
+
+                 </Route>
+                  <Route path='/product/create' element={<Productcreate />}>
 
                  </Route>
             </Routes>

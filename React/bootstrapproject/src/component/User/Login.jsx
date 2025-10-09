@@ -36,7 +36,7 @@ function Login() {
     }
   return (
     <div> <div>
-        <h1>Registration form</h1>
+        <h1>Login form</h1>
         <form>
   
     <div class="form-group">

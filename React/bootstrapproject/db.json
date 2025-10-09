@@ -13,6 +13,22 @@
       "email": "n@gmail.com",
       "password": "123",
       "contact": "9979897073"
+    },
+    {
+      "id": "6c76",
+      "username": "Pandu",
+      "email": "pandu@temp.com",
+      "password": "123",
+      "contact": "9979897073"
+    }
+  ],
+  "product": [
+    {
+      "id": "b8f6",
+      "pname": "Mens Casual Premium Slim Fit T-Shirts ",
+      "price": "12300",
+      "desc": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmjg03ANAx0kB45FhBbDGW9IwKw6rVGw9OWw&s"
     }
   ]
 }
