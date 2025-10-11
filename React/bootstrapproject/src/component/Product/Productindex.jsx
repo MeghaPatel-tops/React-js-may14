@@ -1,5 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import { NavLink, useNavigate } from 'react-router-dom'
+
 
 function Productindex() {
     const [products,setProducts] = useState([]);
@@ -41,6 +43,9 @@ function Productindex() {
                     <td><button className='btn btn-danger' onClick={()=>{
                         delProduct(index.id)
                     }}>Delete</button></td>
+                    <td>
+                       <NavLink to={'/product/edit/'+index.id} className="btn btn-success">Edit</NavLink>
+                    </td>
                 </tr>
             ))
          }

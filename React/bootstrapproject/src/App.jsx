@@ -11,6 +11,7 @@ import Login from './component/User/Login'
 import Profile from './component/User/Profile'
 import Productindex from './component/Product/Productindex'
 import Productcreate from './component/Product/Productcreate'
+import Productedit from './component/Product/Productedit'
 
 
 function App() {
@@ -42,6 +43,9 @@ function App() {
 
                  </Route>
                   <Route path='/product/create' element={<Productcreate />}>
+
+                 </Route>
+                  <Route path='/product/edit/:id' element={<Productedit />}>
 
                  </Route>
             </Routes>
