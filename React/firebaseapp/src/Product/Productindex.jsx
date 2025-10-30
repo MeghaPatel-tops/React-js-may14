@@ -1,4 +1,4 @@
-import { collection, onSnapshot, query, QuerySnapshot } from 'firebase/firestore'
+import { collection, deleteDoc, doc, onSnapshot, query, QuerySnapshot } from 'firebase/firestore'
 import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { db } from '../Firebase'
@@ -16,6 +16,16 @@ function Productindex() {
             setProducts(productArray);
         })
 
+    }
+
+    const delProduct = async(id)=>{
+        try {
+            let docRef = doc(db,"products",id);
+            let result = await deleteDoc(docRef);
+            getProducts();
+        } catch (error) {
+            
+        }
     }
 
     useEffect(()=>{
@@ -42,6 +52,10 @@ function Productindex() {
                         <td>{index.price}</td>
                         <td>{index.desc}</td>
                         <td><img src={index.pimage} alt="" height={"100px"} width={"100px"} /></td>
+                        <td><NavLink to={"/product/edit/"+index.id} className={"btn btn-success"}>Edit</NavLink></td>
+                        <td><button className='btn btn-danger' onClick={()=>{
+                            delProduct(index.id)
+                        }}>Delete</button></td>
                     </tr>
                 ))
             }

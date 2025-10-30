@@ -5,6 +5,7 @@ import { db } from './Firebase'
 import Productadd from './Product/Productadd'
 import Productindex from './Product/Productindex'
 import Login from './Users/Login'
+import ProductEdit from './Product/ProductEdit'
 import { BrowserRouter, NavLink, Route, Router, Routes } from 'react-router-dom'
 
 function App() {
@@ -19,17 +20,20 @@ function App() {
     </div>
     <ul className="nav navbar-nav">
      
-      <NavLink to={"/product"} className={"active"}>Product</NavLink>
+      <li><NavLink to={"/product"} className={"active"}>Product</NavLink></li>
       <li><a href="#">Page 1</a></li>
       <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li>
+      <li><NavLink to={"/login"} >Login</NavLink></li>
     </ul>
   </div>
 </nav>
      
           <Routes>
                <Route path='/productadd' element={<Productadd />}></Route>
+                <Route path='/login' element={<Login />}></Route>
                <Route path='/product' element={<Productindex />}></Route>
+              <Route path='/product/edit/:id' element={<ProductEdit />}></Route>
+
           </Routes>
       
      
