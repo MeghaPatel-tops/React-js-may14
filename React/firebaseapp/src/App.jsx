@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import { db } from './Firebase'
 import Productadd from './Product/Productadd'
 import Productindex from './Product/Productindex'
 import Login from './Users/Login'
 import ProductEdit from './Product/ProductEdit'
+import Profile from './Users/Profile'
 import { BrowserRouter, NavLink, Route, Router, Routes } from 'react-router-dom'
 
 function App() {
@@ -33,6 +33,7 @@ function App() {
                 <Route path='/login' element={<Login />}></Route>
                <Route path='/product' element={<Productindex />}></Route>
               <Route path='/product/edit/:id' element={<ProductEdit />}></Route>
+              <Route path='/profile' element={<Profile />}></Route>
 
           </Routes>
       
