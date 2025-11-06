@@ -6,6 +6,7 @@ import Productindex from './Product/Productindex'
 import Login from './Users/Login'
 import ProductEdit from './Product/ProductEdit'
 import Profile from './Users/Profile'
+import Registraion from './Users/Registraion'
 import { BrowserRouter, NavLink, Route, Router, Routes } from 'react-router-dom'
 
 function App() {
@@ -29,11 +30,12 @@ function App() {
 </nav>
      
           <Routes>
-               <Route path='/productadd' element={<Productadd />}></Route>
-                <Route path='/login' element={<Login />}></Route>
-               <Route path='/product' element={<Productindex />}></Route>
+              <Route path='/productadd' element={<Productadd />}></Route>
+              <Route path='/login' element={<Login />}></Route>
+              <Route path='/product' element={<Productindex />}></Route>
               <Route path='/product/edit/:id' element={<ProductEdit />}></Route>
               <Route path='/profile' element={<Profile />}></Route>
+              <Route path='/registration' element={<Registraion />}></Route>
 
           </Routes>
       

@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "firebase": "^12.4.0",
+    "jwt-encode": "^1.0.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-jwt": "^1.3.0",
     "react-router-dom": "^7.9.4"
   },
   "devDependencies": {
