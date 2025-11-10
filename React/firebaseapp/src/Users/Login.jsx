@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { signInWithPopup } from "firebase/auth";
 import { auth, db, provider } from "../Firebase"
 import { addDoc, collection, deleteDoc, doc, getDoc, getDocs, query, where } from 'firebase/firestore';
@@ -6,9 +6,11 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import sign from 'jwt-encode';
 
 import { useJwt } from 'react-jwt';
+import { LoginContext } from '../LoginContext';
 
 function Login() {
   const navigate = useNavigate();
+  const {flag,setFlag}= useContext(LoginContext)
   const [user, setUser] = useState({})
   const token = "tops";
   const {decodedToken,isExpired} = useJwt(token)
@@ -68,6 +70,7 @@ const findUserToken = async (uid) => {
         localStorage.setItem('firebaseTOKEN',jwt);
         
         //console.log("User found:", doc.id, doc.data());
+        setFlag(1);
         navigate('/profile')
       });
     }
@@ -98,6 +101,7 @@ const findUserToken = async (uid) => {
           
           localStorage.setItem('userId',doc.id);
           localStorage.setItem('token',user.accessToken)
+           setFlag(1);
           navigate('/profile');
         })
         
