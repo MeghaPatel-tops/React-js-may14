@@ -12,6 +12,7 @@ import Theme from './components/Theme'
 import Header from './components/Header'
 import UserReg from './components/UserReg'
 import Productdata from './components/Productdata'
+import Productfilter from './Productfilter'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,7 +20,7 @@ function App() {
   return (
    
         <div>
-          <Productdata />
+          <Productfilter />
        </div>
     
   )
